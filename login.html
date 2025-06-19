@@ -72,8 +72,7 @@
             data: JSON.stringify(formData),
             success: function (response) {
               // Maneja la respuesta exitosa (status 200)
-              alert("Login exitoso");
-              console.log("Respuesta:", response);
+              window.location.href = "/listar.html";
             },
             error: function (xhr, status, error) {
               alert("Error al iniciar sesión: " + xhr.responseText);
