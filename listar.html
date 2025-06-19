@@ -20,78 +20,89 @@
       <div class="row justify-content-center">
         <div class="col-md-10">
           <h1 class="text-center">Taller Mecafab</h1>
-          <div id="estados-jefe" class="py-4 text-end" style="display: none">
-            <small>Filtrar por estado: </small>
-            <button
-              type="button"
-              data-estado="1"
-              class="btn btn-sm btn-primary filter-estado"
-            >
-              Registrado
-            </button>
-            <button
-              type="button"
-              data-estado="2"
-              class="btn btn-sm btn-success filter-estado"
-            >
-              En producción
-            </button>
-            <button
-              type="button"
-              data-estado="3"
-              class="btn btn-sm btn-danger filter-estado"
-            >
-              Por terminar
-            </button>
-            <button
-              type="button"
-              data-estado="4"
-              class="btn btn-sm btn-warning filter-estado"
-            >
-              Terminado
-            </button>
-            <button
-              type="button"
-              data-estado="5"
-              class="btn btn-sm btn-secondary filter-estado"
-            >
-              En espera de material
-            </button>
-          </div>
-          <div
-            id="estados-operario"
-            class="py-4 text-end"
-            style="display: none"
-          >
-            <small>Filtrar por estado: </small>
-            <button
-              type="button"
-              data-estado="2"
-              class="btn btn-sm btn-success filter-estado"
-            >
-              En producción
-            </button>
-            <button
-              type="button"
-              data-estado="3"
-              class="btn btn-sm btn-danger filter-estado"
-            >
-              Por terminar
-            </button>
-            <button
-              type="button"
-              data-estado="4"
-              class="btn btn-sm btn-warning filter-estado"
-            >
-              Terminado
-            </button>
-            <button
-              type="button"
-              data-estado="5"
-              class="btn btn-sm btn-secondary filter-estado"
-            >
-              En espera de material
-            </button>
+          <div class="d-flex justify-content-between">
+            <div class="py-4">
+              <a href="/crear.html" class="btn btn-sm btn-secondary">Crear nuevo</a>
+            </div>
+            <div>
+              <div
+                id="estados-jefe"
+                class="py-4 text-end"
+                style="display: none"
+              >
+                <small>Filtrar por estado: </small>
+                <button
+                  type="button"
+                  data-estado="1"
+                  class="btn btn-sm btn-primary filter-estado"
+                >
+                  Registrado
+                </button>
+                <button
+                  type="button"
+                  data-estado="2"
+                  class="btn btn-sm btn-success filter-estado"
+                >
+                  En producción
+                </button>
+                <button
+                  type="button"
+                  data-estado="3"
+                  class="btn btn-sm btn-danger filter-estado"
+                >
+                  Por terminar
+                </button>
+                <button
+                  type="button"
+                  data-estado="4"
+                  class="btn btn-sm btn-warning filter-estado"
+                >
+                  Terminado
+                </button>
+                <button
+                  type="button"
+                  data-estado="5"
+                  class="btn btn-sm btn-secondary filter-estado"
+                >
+                  En espera de material
+                </button>
+              </div>
+              <div
+                id="estados-operario"
+                class="py-4 text-end"
+                style="display: none"
+              >
+                <small>Filtrar por estado: </small>
+                <button
+                  type="button"
+                  data-estado="2"
+                  class="btn btn-sm btn-success filter-estado"
+                >
+                  En producción
+                </button>
+                <button
+                  type="button"
+                  data-estado="3"
+                  class="btn btn-sm btn-danger filter-estado"
+                >
+                  Por terminar
+                </button>
+                <button
+                  type="button"
+                  data-estado="4"
+                  class="btn btn-sm btn-warning filter-estado"
+                >
+                  Terminado
+                </button>
+                <button
+                  type="button"
+                  data-estado="5"
+                  class="btn btn-sm btn-secondary filter-estado"
+                >
+                  En espera de material
+                </button>
+              </div>
+            </div>
           </div>
           <div class="card shadow">
             <div class="card-header">Lista de tareas</div>
@@ -143,7 +154,9 @@
               </button>
             </div>
             <div id="area-imprimir" class="text-center">
-              <a href="#" target="_self" class="btn btn-secondary btn-sm"> Generar resumen </a>
+              <a href="#" target="_self" class="btn btn-secondary btn-sm">
+                Generar resumen
+              </a>
             </div>
             <div id="area-estado-operario">
               <form id="form-estado-operario">
@@ -286,7 +299,10 @@
                 // Maneja la respuesta exitosa (status 200)
                 console.log("Respuesta:", response);
                 $("#area-entregado").hide();
-                $("#area-imprimir a").attr("href", "/imprimir.html?orden=" + current.id);
+                $("#area-imprimir a").attr(
+                  "href",
+                  "/imprimir.html?orden=" + current.id
+                );
                 $("#area-imprimir").show();
                 //modalEdit.hide();
                 //load({ ...baseParams });
